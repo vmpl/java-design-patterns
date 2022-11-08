@@ -22,7 +22,7 @@ It is created and developed by **java guild** in [vm.pl](https://vm.pl/).
 A Singleton only allows for a single instantiation, but many instances of the same object. The Singleton restricts clients from creating multiple objects, after
 the first object created, it will return instances of itself.
 
-[Singleton example](https://github.com/vmpl/java-design-patterns/blob/master/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton)
+[Singleton example](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton)
 
 ### Structural
 
@@ -31,7 +31,7 @@ the first object created, it will return instances of itself.
 The adapter pattern convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn’t otherwise because
 of incompatible interfaces.
 
-[Adapter example](https://github.com/vmpl/java-design-patterns/blob/master/src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/adapter)
+[Adapter example](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/adapter)
 
 ### Behavioral
 
@@ -39,6 +39,4 @@ of incompatible interfaces.
 
 Strategy pattern is also known as Policy Pattern. We define multiple algorithms and let client application pass the algorithm to be used as a parameter.
 
-[Strategy example](https://github.com/vmpl/java-design-patterns/blob/master/src/main/java/pl/vm/javaguild/designpatterns/pattern/behavioral/strategy/strategyservice)
-
-
+[Strategy example](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/behavioral/strategy)
