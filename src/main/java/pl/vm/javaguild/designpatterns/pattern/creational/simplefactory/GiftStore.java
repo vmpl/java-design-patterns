@@ -15,4 +15,11 @@ public interface GiftStore {
      * @return wanted gift
      */
     Gift buyGift(GiftType giftType);
+
+    /**
+     * Gets currently assigned {@link GiftFactory}
+     *
+     * @return assigned gift factory
+     */
+    GiftFactory getFactory();
 }

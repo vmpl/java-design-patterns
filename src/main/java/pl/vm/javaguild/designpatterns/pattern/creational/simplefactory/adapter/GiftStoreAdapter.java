@@ -13,4 +13,9 @@ public record GiftStoreAdapter(GiftFactory giftFactory) implements GiftStore {
         return giftFactory.create(giftType)
                 .orElseThrow(() -> new GiftNotCreatedException(giftType));
     }
+
+    @Override
+    public GiftFactory getFactory() {
+        return null;
+    }
 }
