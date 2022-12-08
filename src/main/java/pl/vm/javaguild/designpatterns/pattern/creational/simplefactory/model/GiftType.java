@@ -10,5 +10,6 @@ public enum GiftType {
     FRAGRANCE,
     LEGO,
     HOUSEHOLD_TOOLS,
-    SPORT_ACCESSORIES
+    SPORT_ACCESSORIES,
+    TICKET
 }

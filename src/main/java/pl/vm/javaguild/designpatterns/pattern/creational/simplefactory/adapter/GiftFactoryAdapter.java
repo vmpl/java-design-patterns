@@ -10,17 +10,22 @@ import pl.vm.javaguild.designpatterns.pattern.creational.simplefactory.model.Rob
 import pl.vm.javaguild.designpatterns.pattern.creational.simplefactory.model.WalkingPadC1;
 import pl.vm.javaguild.designpatterns.pattern.creational.simplefactory.model.XboxOneX;
 
-public class GiftFactoryAdapter implements GiftFactory {
+import java.util.Optional;
+
+public record GiftFactoryAdapter() implements GiftFactory {
 
     @Override
-    public Gift create(GiftType giftType) {
-        return switch (giftType) {
+    public Optional<Gift> create(GiftType giftType) {
+        Gift gift = switch (giftType) {
             case CONSOLE -> new XboxOneX();
             case DRONE -> new DjiMavic3();
             case FRAGRANCE -> new BleuDeChannel();
             case LEGO -> new MillenniumFalcon();
             case HOUSEHOLD_TOOLS -> new RobomowRt700();
             case SPORT_ACCESSORIES -> new WalkingPadC1();
+            default -> null;
         };
+
+        return Optional.ofNullable(gift);
     }
 }
