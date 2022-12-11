@@ -6,6 +6,6 @@ package pl.vm.javaguild.designpatterns.pattern.creational.factorymethod.Employee
 
 public interface Employee {
 
-    void doJob();
-    void takeBreak();
+    String doJob();
+    String takeBreak();
 }
