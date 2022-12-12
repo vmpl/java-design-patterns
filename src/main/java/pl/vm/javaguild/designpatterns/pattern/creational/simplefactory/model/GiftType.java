@@ -8,7 +8,7 @@ public enum GiftType {
     CONSOLE,
     DRONE,
     FRAGRANCE,
-    LEGO,
+    BRICKS,
     HOUSEHOLD_TOOLS,
     SPORT_ACCESSORIES,
     TICKET

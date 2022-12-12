@@ -7,36 +7,21 @@ It is created and developed by **java guild** in [vm.pl](https://vm.pl/).
 
 - [Design patterns](#design-patterns)
     - [Creational](#creational)
-        - [Singleton](#singleton)
-    - [Structural](#structural)
-        - [Adapter](#adapter)
-    - [Behavioral](#behavioral)
-        - [Strategy](#strategy)
+        - [Simple Factory](#singleton)
 
 ## Design patterns
 
 ### Creational
 
-#### Singleton
+Creational design patterns are a category of design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the
+situation. These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator.
+This gives program more flexibility in deciding which objects need to be created for a given use case.
 
-A Singleton only allows for a single instantiation, but many instances of the same object. The Singleton restricts clients from creating multiple objects, after
-the first object created, it will return instances of itself.
+#### Simple factory
 
-[Singleton example](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton)
+The simple factory design pattern is a design pattern that is used to create objects without specifying the exact class of object that will be created. This is
+done by creating a factory class that has a method for creating objects, and the class of object that is created is determined by the input to this method.
 
-### Structural
+[Simple factory enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/simplefactory/SIMPLE_FACTORY.md)
 
-#### Adapter
-
-The adapter pattern convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn’t otherwise because
-of incompatible interfaces.
-
-[Adapter example](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/adapter)
-
-### Behavioral
-
-#### Strategy
-
-Strategy pattern is also known as Policy Pattern. We define multiple algorithms and let client application pass the algorithm to be used as a parameter.
-
-[Strategy example](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/behavioral/strategy)
+[Simple factory source code of gift store](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/simplefactory)

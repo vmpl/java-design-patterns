@@ -2,13 +2,12 @@ package pl.vm.javaguild.designpatterns.pattern.creational.simplefactory.model;
 
 import java.math.BigDecimal;
 
-public class RobomowRt700 extends Gift {
+public class MoveWithMePro extends Gift {
 
     private static final BigDecimal DEFAULT_PRICE = BigDecimal.valueOf(2000);
-    private static final String DESCRIPTION = "The RT 700 is designed to take the work out of your hands, leaving you with time to enjoy your garden..";
+    private static final String DESCRIPTION = "Move with Me Pro is a cost-effective walking treadmill for people who work from home.";
 
-    public RobomowRt700() {
+    public MoveWithMePro() {
         super(DEFAULT_PRICE, DESCRIPTION);
     }
 }
-
