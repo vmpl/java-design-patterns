@@ -16,6 +16,6 @@ public record GiftStoreAdapter(GiftFactory giftFactory) implements GiftStore {
 
     @Override
     public GiftFactory getFactory() {
-        return null;
+        return giftFactory;
     }
 }
