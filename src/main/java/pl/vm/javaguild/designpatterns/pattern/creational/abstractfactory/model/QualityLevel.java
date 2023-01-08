@@ -1,4 +1,4 @@
-package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.enums;
+package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model;
 
 
 /**
@@ -6,7 +6,9 @@ package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.
  */
 public enum QualityLevel {
 
-    LOW("cheapest option"), MEDIUM("regular option"), HIGH("expensive option");
+    LOW("cheapest option"),
+    MEDIUM("regular option"),
+    HIGH("expensive option");
 
     public final String option;
 

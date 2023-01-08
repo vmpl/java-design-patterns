@@ -1,7 +1,7 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.laptop;
 
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.LaptopComponentFactory;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.enums.Producer;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.Producer;
 
 public class LenovoLaptop extends Laptop {
 

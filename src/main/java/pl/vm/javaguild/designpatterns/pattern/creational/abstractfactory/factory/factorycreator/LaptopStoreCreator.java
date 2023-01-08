@@ -1,4 +1,4 @@
-package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factorycreators;
+package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factorycreator;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -7,7 +7,9 @@ import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.laptopstore.LaptopStore;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.laptopstore.impl.LenovoLaptopStore;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.laptopstore.impl.SamsungLaptopStore;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.enums.Producer;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.Producer;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * Class that returns implementations of LaptopStore, depending on chosen Producer
@@ -18,6 +20,8 @@ import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.e
 public class LaptopStoreCreator {
 
     public static LaptopStore getLaptopStore(Producer producer) {
+        requireNonNull(producer);
+
         return switch (producer) {
             case DELL -> new DellLaptopStore();
             case SAMSUNG -> new SamsungLaptopStore();

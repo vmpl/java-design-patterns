@@ -5,17 +5,18 @@ import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.laptopstore.LaptopStore;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.laptop.DellLaptop;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.laptop.Laptop;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.enums.QualityLevel;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.QualityLevel;
 
-import static pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factorycreators.ComponentFactoryCreator.getComponentFactory;
+import static pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factorycreator.ComponentFactoryCreator.getComponentFactory;
 
 @Slf4j
 public class DellLaptopStore extends LaptopStore {
 
     @Override
     protected Laptop createLaptop(QualityLevel qualityLevel) {
-        log.info("Building laptop in DellLaptopStore of " + qualityLevel + " quality.");
+        log.info("Building laptop in DellLaptopStore of {} quality.", qualityLevel);
         LaptopComponentFactory componentFactory = getComponentFactory(qualityLevel);
+
         return new DellLaptop(componentFactory);
     }
 }

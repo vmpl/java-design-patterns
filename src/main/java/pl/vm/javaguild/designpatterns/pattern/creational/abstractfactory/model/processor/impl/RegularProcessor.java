@@ -1,6 +1,6 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.processor.impl;
 
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.enums.QualityLevel;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.QualityLevel;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.processor.Processor;
 
 public class RegularProcessor implements Processor {

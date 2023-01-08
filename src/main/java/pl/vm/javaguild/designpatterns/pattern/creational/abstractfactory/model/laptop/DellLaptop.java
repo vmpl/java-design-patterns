@@ -1,10 +1,8 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.laptop;
 
-import lombok.extern.slf4j.Slf4j;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.LaptopComponentFactory;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.enums.Producer;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.Producer;
 
-@Slf4j
 public class DellLaptop extends Laptop {
 
     public DellLaptop(LaptopComponentFactory componentFactory) {

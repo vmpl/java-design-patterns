@@ -1,4 +1,4 @@
-package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factorycreators;
+package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factorycreator;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -7,7 +7,9 @@ import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.impl.LaptopHighComponentFactoryImpl;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.impl.LaptopLowComponentFactoryImpl;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.impl.LaptopMediumComponentFactoryImpl;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.enums.QualityLevel;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.QualityLevel;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * Class that returns implementations of ComponentFactory, depending on chosen QualityLevel
@@ -18,6 +20,8 @@ import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.e
 public class ComponentFactoryCreator {
 
     public static LaptopComponentFactory getComponentFactory(QualityLevel qualityLevel) {
+        requireNonNull(qualityLevel);
+
         return switch (qualityLevel) {
             case LOW -> new LaptopLowComponentFactoryImpl();
             case MEDIUM -> new LaptopMediumComponentFactoryImpl();

@@ -1,6 +1,6 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.graphiccard.impl;
 
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.enums.QualityLevel;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.QualityLevel;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.graphiccard.GraphicCard;
 
 public class RegularGraphicCard implements GraphicCard {

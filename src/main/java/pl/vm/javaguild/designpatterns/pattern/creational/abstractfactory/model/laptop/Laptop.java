@@ -1,16 +1,12 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.laptop;
 
-import lombok.Getter;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.enums.Producer;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.Producer;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.graphiccard.GraphicCard;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.motherboard.Motherboard;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.processor.Processor;
 
 @Slf4j
-@Setter
-@Getter
 public abstract class Laptop {
 
     String modelName;
