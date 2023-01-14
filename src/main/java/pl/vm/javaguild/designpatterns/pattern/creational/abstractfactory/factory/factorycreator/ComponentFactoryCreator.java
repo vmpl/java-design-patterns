@@ -4,9 +4,9 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.LaptopComponentFactory;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.impl.LaptopHighComponentFactoryImpl;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.impl.LaptopLowComponentFactoryImpl;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.impl.LaptopMediumComponentFactoryImpl;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.impl.LaptopHighComponentFactory;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.impl.LaptopLowComponentFactory;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.impl.LaptopMediumComponentFactory;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.QualityLevel;
 
 import static java.util.Objects.requireNonNull;
@@ -23,9 +23,9 @@ public class ComponentFactoryCreator {
         requireNonNull(qualityLevel);
 
         return switch (qualityLevel) {
-            case LOW -> new LaptopLowComponentFactoryImpl();
-            case MEDIUM -> new LaptopMediumComponentFactoryImpl();
-            case HIGH -> new LaptopHighComponentFactoryImpl();
+            case LOW -> new LaptopLowComponentFactory();
+            case MEDIUM -> new LaptopMediumComponentFactory();
+            case HIGH -> new LaptopHighComponentFactory();
         };
     }
 }

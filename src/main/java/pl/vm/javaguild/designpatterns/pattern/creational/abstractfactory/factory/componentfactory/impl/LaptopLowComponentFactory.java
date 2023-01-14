@@ -2,25 +2,25 @@ package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factor
 
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.componentfactory.LaptopComponentFactory;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.graphiccard.GraphicCard;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.graphiccard.impl.RegularGraphicCard;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.graphiccard.impl.WeakGraphicCard;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.motherboard.Motherboard;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.motherboard.impl.RegularMotherboard;
-import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.processor.impl.RegularProcessor;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.motherboard.impl.WeakMotherboard;
+import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.processor.impl.WeakProcessor;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.processor.Processor;
 
-public class LaptopMediumComponentFactoryImpl implements LaptopComponentFactory {
+public class LaptopLowComponentFactory implements LaptopComponentFactory {
     @Override
     public Processor createProcessor() {
-        return new RegularProcessor();
+        return new WeakProcessor();
     }
 
     @Override
     public GraphicCard createGraphicCard() {
-        return new RegularGraphicCard();
+        return new WeakGraphicCard();
     }
 
     @Override
     public Motherboard createMotherBoard() {
-        return new RegularMotherboard();
+        return new WeakMotherboard();
     }
 }
