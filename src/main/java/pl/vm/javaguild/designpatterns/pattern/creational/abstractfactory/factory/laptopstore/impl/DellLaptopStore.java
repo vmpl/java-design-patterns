@@ -7,7 +7,7 @@ import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.l
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.laptop.Laptop;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.QualityLevel;
 
-import static pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factorycreator.ComponentFactoryCreator.getComponentFactory;
+import static pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factoryprovider.ComponentFactoryProvider.getComponentFactory;
 
 @Slf4j
 public class DellLaptopStore extends LaptopStore {

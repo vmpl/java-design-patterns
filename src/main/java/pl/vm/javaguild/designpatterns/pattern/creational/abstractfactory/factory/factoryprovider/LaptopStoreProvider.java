@@ -1,4 +1,4 @@
-package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factorycreator;
+package pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factoryprovider;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -17,7 +17,7 @@ import static java.util.Objects.requireNonNull;
  */
 @Slf4j
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class LaptopStoreCreator {
+public class LaptopStoreProvider {
 
     public static LaptopStore getLaptopStore(Producer producer) {
         requireNonNull(producer);

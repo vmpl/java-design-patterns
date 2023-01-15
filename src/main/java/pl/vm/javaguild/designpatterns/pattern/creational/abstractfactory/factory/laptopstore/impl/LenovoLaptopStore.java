@@ -7,7 +7,7 @@ import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.l
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.laptop.LenovoLaptop;
 import pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.model.QualityLevel;
 
-import static pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factorycreator.ComponentFactoryCreator.getComponentFactory;
+import static pl.vm.javaguild.designpatterns.pattern.creational.abstractfactory.factory.factoryprovider.ComponentFactoryProvider.getComponentFactory;
 
 @Slf4j
 public class LenovoLaptopStore extends LaptopStore {
