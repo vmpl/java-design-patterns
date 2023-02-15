@@ -26,66 +26,66 @@ public interface Employee {
 }
 public class Developer implements Employee {
 
-    private Seniority seniority;
-    private Stack stack;
+    private final Seniority seniority;
+    private final TechStack techStack;
 
-    private final String devWork = "I have no idea what I'm doing!";
-    private final String devBreak = "Let's play table football!";
+    private final String DEV_WORK = "I have no idea what I'm doing!";
+    private final String DEV_BREAK = "Let's play table football!";
 
-    public Developer(Seniority seniority, Stack stack) {
+    public Developer(final Seniority seniority, final TechStack techStack) {
 
         this.seniority = seniority;
-        this.stack = stack;
+        this.techStack = techStack;
 
     }
 
     @Override
     public String doJob() {
-        return this.toString() + " " + devWork;
+        return this + " " + DEV_WORK;
     }
 
     @Override
     public String takeBreak() {
-        return this.toString() + " " + devBreak;
-    }
-
-}
-
-
-public class FinanceDepartmentEmployee implements Employee {
-
-    private Seniority seniority;
-    private Section section;
-
-    private final String financeEmployeeWork = "I am counting money!";
-    private final String financeEmployeeBreak = "I am going for a coffee and back to work!";
-
-
-    public FinanceDepartmentEmployee(Seniority seniority, Section section) {
-        this.seniority = seniority;
-        this.section = section;
-    }
-
-    @Override
-    public String doJob() {
-
-        return this.toString() +" " + financeEmployeeWork;
-    }
-
-    @Override
-    public String takeBreak() {
-
-        return this.toString() +" " + financeEmployeeBreak;
+        return this + " " + DEV_BREAK;
     }
 
     @Override
     public String toString() {
-        return "FinanceDepartmentEmployee{" +
-                "seniority=" + seniority +
-                ", section=" + section +
-                '}';
+        return String.format("Developer{seniority = %s, techStack = %s}", this.seniority, this.techStack);
     }
 }
+
+    public class FinanceDepartmentEmployee implements Employee {
+
+        private Seniority seniority;
+        private Section section;
+
+        private final String financeEmployeeWork = "I am counting money!";
+        private final String financeEmployeeBreak = "I am going for a coffee and back to work!";
+
+
+        public FinanceDepartmentEmployee(Seniority seniority, Section section) {
+            this.seniority = seniority;
+            this.section = section;
+        }
+
+        @Override
+        public String doJob() {
+
+            return this + " " + financeEmployeeWork;
+        }
+
+        @Override
+        public String takeBreak() {
+
+            return this + " " + financeEmployeeBreak;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("FinanceDepartmentEmployee{seniority = %s, section = %s}", this.seniority, this.section);
+        }
+    }
 ```
 To create new employees we use proper department
 ```java
@@ -112,31 +112,29 @@ public abstract class Department {
 
 }
 
-@RequiredArgsConstructor
 public class ItDepartment extends Department {
 
-    private Seniority seniority;
-    private Stack stack;
+    private final Seniority seniority;
+    private final TechStack techStack;
 
-    public ItDepartment(Seniority seniority, Stack stack){
+    public ItDepartment(final Seniority seniority, final TechStack techStack){
 
         this.seniority = seniority;
-        this.stack = stack;
+        this.techStack = techStack;
     }
     @Override
     public Employee createEmployee() {
-        return new Developer(seniority, stack);
+        return new Developer(seniority, techStack);
     }
 
 }
 
-@RequiredArgsConstructor
 public class FinancialDepartment extends Department {
 
-    private Seniority seniority;
-    private Section section;
+    private final Seniority seniority;
+    private final Section section;
 
-    public FinancialDepartment(Seniority seniority, Section section) {
+    public FinancialDepartment(final Seniority seniority, final Section section) {
         this.seniority = seniority;
         this.section = section;
     }
@@ -145,7 +143,7 @@ public class FinancialDepartment extends Department {
     public Employee createEmployee() {
         return new FinanceDepartmentEmployee(seniority, section);
     }
-    
+
 }
 ```
 

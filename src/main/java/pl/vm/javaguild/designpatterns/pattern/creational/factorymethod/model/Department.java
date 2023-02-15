@@ -1,11 +1,10 @@
-package pl.vm.javaguild.designpatterns.pattern.creational.factorymethod.Department;
+package pl.vm.javaguild.designpatterns.pattern.creational.factorymethod.model;
 
-import pl.vm.javaguild.designpatterns.pattern.creational.factorymethod.Employee.Employee;
+import pl.vm.javaguild.designpatterns.pattern.creational.factorymethod.model.Interfaces.Employee;
 
 /**
  * The fundamental factory class.
  */
-
 public abstract class Department {
 
     public String work(){
