@@ -1,0 +1,27 @@
+package pl.vm.javaguild.designpatterns.pattern.creational.prototype.model;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class Player extends Person<Player> {
+
+    private final SportDiscipline sportDiscipline;
+
+    public Player(String name, SportDiscipline position) {
+        super(name);
+        this.sportDiscipline = position;
+    }
+
+    @Override
+    void showInfo() {
+        log.info(
+                """
+                        --- Player info ---
+                        Name:       {}
+                        Discipline: {}
+                        """,
+                name,
+                sportDiscipline
+        );
+    }
+}
