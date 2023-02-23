@@ -9,4 +9,5 @@ public enum CoachingStrategy {
     MAN_TO_MAN_DEFENSE,
     FAST_BREAK,
     PRESSING,
+    TRIANGLE
 }

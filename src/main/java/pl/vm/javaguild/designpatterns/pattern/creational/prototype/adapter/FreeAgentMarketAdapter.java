@@ -14,12 +14,12 @@ public class FreeAgentMarketAdapter implements FreeAgentMarket {
     private final Team baseTeam;
 
     @Override
-    public Player cratePlayer() {
+    public Player createPlayer() {
         return basePlayer.copy();
     }
 
     @Override
-    public Player cratePlayer(String name) {
+    public Player createPlayer(String name) {
         Player player = basePlayer.copy();
         player.setName(name);
         return player;

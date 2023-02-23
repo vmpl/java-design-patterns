@@ -14,14 +14,14 @@ public interface FreeAgentMarket {
      *
      * @return copy of player
      */
-    Player cratePlayer();
+    Player createPlayer();
 
     /**
      * Create complete copy {@link Player} with updated name
      *
      * @return copy of player
      */
-    Player cratePlayer(String name);
+    Player createPlayer(String name);
 
     /**
      * Create complete copy {@link Coach}
