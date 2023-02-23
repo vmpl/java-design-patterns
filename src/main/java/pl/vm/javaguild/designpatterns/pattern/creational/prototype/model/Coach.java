@@ -12,6 +12,11 @@ public class Coach extends Person<Coach> {
         this.coachingStrategy = coachingStrategy;
     }
 
+    public Coach(Coach coach) {
+        super(coach.name);
+        this.coachingStrategy = coach.coachingStrategy;
+    }
+
     @Override
     void showInfo() {
         log.info(

@@ -1,21 +1,25 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.prototype.model;
 
-import org.slf4j.Logger;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import pl.vm.javaguild.designpatterns.pattern.creational.prototype.Prototype;
 
 import java.util.List;
 
+@Slf4j
+@Getter
 public class Team extends Prototype<Team> {
 
-    private static final Logger log = org.slf4j.LoggerFactory.getLogger(Team.class);
     private final Coach coach;
     private final List<Player> players;
+    @Setter
     private String name;
 
     public Team(Team team) {
         this.name = team.getName();
-        this.coach = team.getCoach().copy();
-        this.players = team.getPlayers().stream().map(Player::copy).toList();
+        this.coach = new Coach(team.getCoach());
+        this.players = team.getPlayers().stream().map(Player::new).toList();
     }
 
     public Team(Coach coach, List<Player> players, String name) {
@@ -42,21 +46,5 @@ public class Team extends Prototype<Team> {
                 coach.getName(),
                 players.size()
         );
-    }
-
-    public Coach getCoach() {
-        return this.coach;
-    }
-
-    public List<Player> getPlayers() {
-        return this.players;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

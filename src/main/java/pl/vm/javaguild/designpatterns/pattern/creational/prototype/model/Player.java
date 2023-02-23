@@ -12,6 +12,11 @@ public class Player extends Person<Player> {
         this.sportDiscipline = position;
     }
 
+    public Player(Player player) {
+        super(player.name);
+        this.sportDiscipline = player.sportDiscipline;
+    }
+
     @Override
     void showInfo() {
         log.info(
