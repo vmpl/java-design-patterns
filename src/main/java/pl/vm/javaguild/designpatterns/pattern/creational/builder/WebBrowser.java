@@ -1,10 +1,12 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.builder;
 
+import lombok.Getter;
 import lombok.NonNull;
 
 /**
- * Representation of a modern web browser.
+ * Representation of a modern web browser. Hand written builder.
  */
+@Getter
 public final class WebBrowser {
 
   //Required fields
@@ -21,30 +23,6 @@ public final class WebBrowser {
     this.name = builder.name;
     this.engine = builder.engine;
     this.version = builder.version;
-  }
-
-  /**
-   * Web browser's name
-   * @return Name
-   */
-  public String getName(){
-    return this.name;
-  }
-
-  /**
-   * Web browser's engine
-   * @return Engine
-   */
-  public String getEngine(){
-    return this.engine;
-  }
-
-  /**
-   * Web browser's version
-   * @return Version
-   */
-  public String getVersion(){
-    return this.version;
   }
 
   /**

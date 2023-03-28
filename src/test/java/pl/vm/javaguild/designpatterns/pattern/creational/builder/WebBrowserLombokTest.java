@@ -1,13 +1,13 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.builder;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
 @DisplayName("Builder functionality tests")
-class WebBrowserTest {
+class WebBrowserLombokTest {
 
   private static final String NAME_BRAVE = "Brave";
   private static final String ENGINE_CHROMIUM = "Chromium";
@@ -16,7 +16,7 @@ class WebBrowserTest {
   @Test
   void shouldBuildObject_givenAllFieldsProvided() {
     //given + when
-    final var braveBrowser = WebBrowser.builder()
+    final var braveBrowser = WebBrowserLombok.builder()
         .name(NAME_BRAVE)
         .engine(ENGINE_CHROMIUM)
         .version(VERSION_BRAVE_LATEST)
@@ -30,9 +30,9 @@ class WebBrowserTest {
   }
 
   @Test
-  void shouldBuildObject_givenOnlyMandatoryFieldsProvided() {
+  void shouldBuildObject_givenSomeFieldsProvided() {
     //given + when
-    final var braveBrowser = WebBrowser.builder()
+    final var braveBrowser = WebBrowserLombok.builder()
         .name(NAME_BRAVE)
         .engine(ENGINE_CHROMIUM)
         .build();
@@ -44,18 +44,5 @@ class WebBrowserTest {
     assertThat(braveBrowser.getVersion()).isNull();
   }
 
-  @Test
-  void shouldThrowAnException_givenMissingMandatoryField() {
-    //given + when + then
-    assertThrows(IllegalArgumentException.class,
-        () -> WebBrowser.builder().name(NAME_BRAVE).build());
-  }
-
-  @Test
-  void shouldThrowAnException_givenNullAsMandatoryFieldArgument() {
-    //given + when + then
-    assertThrows(NullPointerException.class,
-        () -> WebBrowser.builder().name(null).build());
-  }
 
 }
