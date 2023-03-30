@@ -22,6 +22,6 @@ This gives program more flexibility in deciding which objects need to be created
 The simple factory design pattern is a design pattern that is used to create objects without specifying the exact class of object that will be created. This is
 done by creating a factory class that has a method for creating objects, and the class of object that is created is determined by the input to this method.
 
-[Simple factory enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/simplefactory/SIMPLE_FACTORY.md)
+[Simple factory enhanced documentation](src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton/SINGLETON.md)
 
 [Simple factory source code of gift store](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/simplefactory)
