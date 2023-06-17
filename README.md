@@ -8,6 +8,7 @@ It is created and developed by **java guild** in [vm.pl](https://vm.pl/).
 - [Design patterns](#design-patterns)
     - [Creational](#creational)
         - [Simple Factory](#simple-factory)
+        - [Builder](#builder)
         - [Prototype](#prototype)
 
 ## Design patterns
