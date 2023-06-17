@@ -9,12 +9,12 @@ public class Coach extends Person<Coach> {
 
     private final CoachingStrategy coachingStrategy;
 
-    public Coach(String name, CoachingStrategy coachingStrategy) {
+    public Coach(String name, final CoachingStrategy coachingStrategy) {
         super(name);
         this.coachingStrategy = coachingStrategy;
     }
 
-    public Coach(Coach coach) {
+    public Coach(final Coach coach) {
         super(coach.name);
         this.coachingStrategy = coach.coachingStrategy;
     }

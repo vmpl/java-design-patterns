@@ -16,13 +16,13 @@ public class Team extends Prototype<Team> {
     @Setter
     private String name;
 
-    public Team(Team team) {
+    public Team(final Team team) {
         this.name = team.getName();
         this.coach = new Coach(team.getCoach());
         this.players = team.getPlayers().stream().map(Player::new).toList();
     }
 
-    public Team(Coach coach, List<Player> players, String name) {
+    public Team(final Coach coach, final List<Player> players, final String name) {
         this.coach = coach;
         this.players = players;
         this.name = name;

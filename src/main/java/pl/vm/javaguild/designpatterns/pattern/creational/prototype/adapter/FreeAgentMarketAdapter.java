@@ -1,17 +1,21 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.prototype.adapter;
 
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import pl.vm.javaguild.designpatterns.pattern.creational.prototype.FreeAgentMarket;
 import pl.vm.javaguild.designpatterns.pattern.creational.prototype.model.Coach;
 import pl.vm.javaguild.designpatterns.pattern.creational.prototype.model.Player;
 import pl.vm.javaguild.designpatterns.pattern.creational.prototype.model.Team;
 
+import static lombok.AccessLevel.PRIVATE;
+
 @RequiredArgsConstructor
+@FieldDefaults(makeFinal = true, level = PRIVATE)
 public class FreeAgentMarketAdapter implements FreeAgentMarket {
 
-    private final Player basePlayer;
-    private final Coach baseCoach;
-    private final Team baseTeam;
+    Player basePlayer;
+    Coach baseCoach;
+    Team baseTeam;
 
     @Override
     public Player createPlayer() {

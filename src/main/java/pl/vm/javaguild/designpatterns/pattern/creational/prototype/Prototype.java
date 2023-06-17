@@ -21,7 +21,7 @@ public abstract class Prototype<T> implements Cloneable {
         try {
             return (T) super.clone();
         } catch (CloneNotSupportedException e) {
-            throw new CloneNotSupportedRuntimeException("Cannot copy current object: " + this);
+            throw new CloneNotSupportedRuntimeException("Cannot copy current object: " + this, e);
         }
     }
 }

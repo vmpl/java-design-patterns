@@ -1,5 +1,7 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.prototype;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pl.vm.javaguild.designpatterns.pattern.creational.prototype.adapter.FreeAgentMarketAdapter;

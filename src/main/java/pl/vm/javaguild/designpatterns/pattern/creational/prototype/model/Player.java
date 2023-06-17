@@ -9,12 +9,12 @@ public class Player extends Person<Player> {
 
     private final SportDiscipline sportDiscipline;
 
-    public Player(String name, SportDiscipline position) {
+    public Player(String name, final SportDiscipline position) {
         super(name);
         this.sportDiscipline = position;
     }
 
-    public Player(Player player) {
+    public Player(final Player player) {
         super(player.name);
         this.sportDiscipline = player.sportDiscipline;
     }
