@@ -7,7 +7,9 @@ It is created and developed by **java guild** in [vm.pl](https://vm.pl/).
 
 - [Design patterns](#design-patterns)
     - [Creational](#creational)
-        - [Simple Factory](#singleton)
+        - [Simple Factory](#simple-factory)
+        - [Builder](#builder)
+        - [Prototype](#prototype)
 
 ## Design patterns
 
@@ -19,8 +21,10 @@ This gives program more flexibility in deciding which objects need to be created
 
 #### Simple factory
 
-The simple factory design pattern is a design pattern that is used to create objects without specifying the exact class of object that will be created. This is
-done by creating a factory class that has a method for creating objects, and the class of object that is created is determined by the input to this method.
+The simple factory design pattern is a design pattern that is used to create objects without specifying the exact class
+of object that will be created. This is
+done by creating a factory class that has a method for creating objects, and the class of object that is created is
+determined by the input to this method.
 
 [Simple factory enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/simplefactory/SIMPLE_FACTORY.md)
 
@@ -33,3 +37,15 @@ The builder pattern is a design pattern designed to provide a flexible solution 
 [Builder enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/builder/README.md)
 
 [Builder source code ](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/builder)
+
+
+#### Prototype
+
+The Prototype Design Pattern is a creational design pattern that allows you to create new objects by cloning existing
+ones. The idea is to create a prototype object and then create new objects by copying this prototype and then modifying
+it as necessary. This can be useful in situations where creating new objects from scratch is expensive, time-consuming,
+or difficult. This allows you to create new objects that are similar to existing ones, but with slight variations.
+
+[Prototype enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/prototype/PROTOTYPE.md)
+
+[Prototype source code of free agent market](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/prototype)

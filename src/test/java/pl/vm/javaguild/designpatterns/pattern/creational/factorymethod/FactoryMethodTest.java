@@ -1,4 +1,4 @@
-package pl.vm.javaguild.designpatterns.creational.factorymethodtest;
+package pl.vm.javaguild.designpatterns.pattern.creational.factorymethod;
 
 import org.junit.jupiter.api.Test;
 import pl.vm.javaguild.designpatterns.pattern.creational.factorymethod.model.Department;
@@ -11,7 +11,7 @@ import pl.vm.javaguild.designpatterns.pattern.creational.factorymethod.model.Int
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FactoryMethodTest {
+class FactoryMethodTest {
 
     @Test
     void createJuniorBackendDeveloper() {
