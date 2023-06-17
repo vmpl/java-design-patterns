@@ -25,3 +25,11 @@ done by creating a factory class that has a method for creating objects, and the
 [Simple factory enhanced documentation](src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton/SINGLETON.md)
 
 [Simple factory source code of gift store](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/simplefactory)
+
+#### Builder
+
+The builder pattern is a design pattern designed to provide a flexible solution to various object creation problems in object-oriented programming. The intent of the builder design pattern is to separate the construction of a complex object from its representation. It is one of the Gang of Four design patterns.
+
+[Builder enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/builder/README.md)
+
+[Builder source code ](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/builder)
