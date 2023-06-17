@@ -10,6 +10,7 @@ It is created and developed by **java guild** in [vm.pl](https://vm.pl/).
         - [Simple Factory](#simple-factory)
         - [Builder](#builder)
         - [Prototype](#prototype)
+        - [Singleton](#singleton)
 
 ## Design patterns
 
@@ -26,7 +27,7 @@ of object that will be created. This is
 done by creating a factory class that has a method for creating objects, and the class of object that is created is
 determined by the input to this method.
 
-[Simple factory enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/simplefactory/SIMPLE_FACTORY.md)
+[Simple factory enhanced documentation](src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton/SINGLETON.md)
 
 [Simple factory source code of gift store](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/simplefactory)
 
@@ -49,3 +50,12 @@ or difficult. This allows you to create new objects that are similar to existing
 [Prototype enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/prototype/PROTOTYPE.md)
 
 [Prototype source code of free agent market](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/prototype)
+
+#### Singleton
+In Java, the Singleton pattern is a design pattern that restricts the instantiation of a class to one object and provides global access to that instance throughout the application.
+It ensures that a class has only one instance and provides a single point of access to that instance.
+
+
+[Singleton enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton/SINGLETON.md)
+
+[Singleton source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton)
