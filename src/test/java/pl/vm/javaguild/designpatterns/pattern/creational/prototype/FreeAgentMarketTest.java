@@ -1,7 +1,5 @@
 package pl.vm.javaguild.designpatterns.pattern.creational.prototype;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pl.vm.javaguild.designpatterns.pattern.creational.prototype.adapter.FreeAgentMarketAdapter;
@@ -14,10 +12,8 @@ import pl.vm.javaguild.designpatterns.pattern.creational.prototype.model.Team;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.catchThrowable;
-import static org.assertj.core.api.Assertions.setAllowComparingPrivateFields;
 
-@DisplayName("Creational pattern: Prototype functionality Test")
+@DisplayName("Creational pattern: Prototype Test")
 class FreeAgentMarketTest {
 
     private final Player baseFirstPlayer = new Player("Michael Jordan", SportDiscipline.BASKETBALL);

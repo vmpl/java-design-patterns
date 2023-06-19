@@ -5,9 +5,9 @@ package pl.vm.javaguild.designpatterns.pattern.structural.composite.model;
  */
 public enum Rarity {
     /**
-     * Normal, common rarity.
+     * Common rarity.
      */
-    NORMAL,
+    COMMON,
     /**
      * Rare rarity.
      */

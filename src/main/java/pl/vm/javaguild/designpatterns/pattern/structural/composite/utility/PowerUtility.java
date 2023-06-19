@@ -9,7 +9,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class PowerUtility {
 
-    public static final Long NORMAL_POWER = 10L;
+    public static final Long COMMON_POWER = 10L;
     public static final Long RARE_POWER = 50L;
     public static final Long UNIQUE_POWER = 75L;
     public static final Long LEGENDARY_POWER = 100L;
