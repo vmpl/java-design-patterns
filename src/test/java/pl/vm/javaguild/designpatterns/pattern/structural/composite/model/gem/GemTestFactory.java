@@ -1,27 +1,30 @@
 package pl.vm.javaguild.designpatterns.pattern.structural.composite.model.gem;
 
+import lombok.Getter;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.Item;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.model.Rarity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
+@Getter
 public class GemTestFactory {
 
     private final List<Gem> gems = new ArrayList<>();
 
     public GemTestFactory() {
-        gems.add(new Ruby());
-        gems.add(new Emerald());
-        gems.add(new Diamond());
-        gems.add(new Sapphire());
+        gems.addAll(List.of(
+                new Ruby(),
+                new Emerald(),
+                new Diamond(),
+                new Sapphire()
+        ));
     }
 
-    public Optional<? extends Item> getGemsByRarity(Rarity rarity) {
+    public Item getByRarity(Rarity rarity) {
         return gems.stream()
                 .filter(gem -> gem.getRarity() == rarity)
-                .findFirst();
+                .findFirst().orElseThrow();
     }
 }
 

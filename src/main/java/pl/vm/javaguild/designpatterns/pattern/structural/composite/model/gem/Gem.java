@@ -1,9 +1,11 @@
 package pl.vm.javaguild.designpatterns.pattern.structural.composite.model.gem;
 
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.Item;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.model.Rarity;
 
+@SuperBuilder
 @RequiredArgsConstructor
 abstract class Gem implements Item {
 

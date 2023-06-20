@@ -1,12 +1,14 @@
 package pl.vm.javaguild.designpatterns.pattern.structural.composite.model.character;
 
 import lombok.AllArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.Item;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.utility.PowerUtility;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@SuperBuilder
 @AllArgsConstructor
 abstract class Character implements Item {
 
