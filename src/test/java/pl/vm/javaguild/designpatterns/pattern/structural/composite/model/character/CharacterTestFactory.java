@@ -11,43 +11,43 @@ import java.util.Objects;
 @Getter
 public class CharacterTestFactory {
 
-    public static final String CONAN = "Conan";
-    public static final String MALFURION = "Malfurion";
-    public static final String KEL_THUZAD = "Kel'Thuzad";
-    public static final String GARONA = "Garona";
-    public static final String GANDALF = "Gandalf";
+    public static final String BARBARIAN_NAME = "Conan";
+    public static final String DRUID_NAME = "Malfurion";
+    public static final String NECROMANCER_NAME = "Kel'Thuzad";
+    public static final String ROGUE_NAME = "Garona";
+    public static final String SORCERER_NAME = "Gandalf";
 
-    private final List<Character> characters = new ArrayList<>();
+    private final List<Item> characters = new ArrayList<>();
 
-    public CharacterTestFactory() {
+    public CharacterTestFactory(EquipmentTestFactory equipmentTestFactory) {
         characters.addAll(List.of(
                 Barbarian.builder()
-                        .name(CONAN)
+                        .name(BARBARIAN_NAME)
                         .power(100L)
                         .equipment(new ArrayList<>())
                         .build(),
                 Druid.builder()
-                        .name(MALFURION)
+                        .name(DRUID_NAME)
                         .power(80L)
-                        .equipment(List.of(
-                                EquipmentTestFactory.SWORD_WITH_DIAMOND
-                        ))
+                        .equipment(new ArrayList<>(List.of(
+                                equipmentTestFactory.getByName(EquipmentTestFactory.ARMOR_NAME)
+                        )))
                         .build(),
                 Necromancer.builder()
-                        .name(KEL_THUZAD)
+                        .name(NECROMANCER_NAME)
                         .power(50L)
-                        .equipment(List.of(
-                                EquipmentTestFactory.SWORD_WITH_DIAMOND,
-                                EquipmentTestFactory.HELMET_WITH_RUBY_AND_EMERALD
-                        ))
+                        .equipment(new ArrayList<>(List.of(
+                                equipmentTestFactory.getByName(EquipmentTestFactory.SWORD_NAME),
+                                equipmentTestFactory.getByName(EquipmentTestFactory.HELMET_NANE)
+                        )))
                         .build(),
                 Roque.builder()
-                        .name(GARONA)
+                        .name(ROGUE_NAME)
                         .power(20L)
-                        .equipment(EquipmentTestFactory.getAll())
+                        .equipment(new ArrayList<>(equipmentTestFactory.getAll()))
                         .build(),
                 Sorcerer.builder()
-                        .name(GANDALF)
+                        .name(SORCERER_NAME)
                         .power(60L)
                         .equipment(new ArrayList<>())
                         .build()
@@ -61,7 +61,7 @@ public class CharacterTestFactory {
                 .orElseThrow();
     }
 
-    public List<? extends Item> getAll() {
+    public List<Item> getAll() {
         return characters;
     }
 }

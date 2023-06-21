@@ -6,7 +6,9 @@ import pl.vm.javaguild.designpatterns.pattern.structural.composite.model.gem.Dia
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.model.gem.Emerald;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.model.gem.Ruby;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static pl.vm.javaguild.designpatterns.pattern.structural.composite.model.Rarity.COMMON;
 import static pl.vm.javaguild.designpatterns.pattern.structural.composite.model.Rarity.LEGENDARY;
@@ -22,29 +24,64 @@ public class EquipmentTestFactory {
     public static final Item SWORD_WITH_DIAMOND;
     public static final Item HELMET_WITH_RUBY_AND_EMERALD;
 
+    public static final String ARMOR_NAME = "Breastplate of the Shadow Guardian";
+    public static final String SWORD_NAME = "Blade of the Fallen Kingdom";
+    public static final String HELMET_NANE = "Stormcaller";
+
     static {
         ARMOR_WITHOUT_GEM = Armor.builder()
-                .name("Breastplate of the Shadow Guardian")
+                .name(ARMOR_NAME)
                 .power(RARE_POWER)
                 .rarity(RARE)
                 .gems(List.of())
                 .build();
         SWORD_WITH_DIAMOND = Sword.builder()
-                .name("Blade of the Fallen Kingdom")
+                .name(SWORD_NAME)
                 .power(LEGENDARY_POWER)
                 .rarity(LEGENDARY)
                 .gems(List.of(new Diamond()))
                 .build();
         HELMET_WITH_RUBY_AND_EMERALD = Helmet.builder()
-                .name("Stormcaller")
+                .name(HELMET_NANE)
                 .power(COMMON_POWER)
                 .rarity(COMMON)
                 .gems(List.of(new Ruby(), new Emerald()))
                 .build();
     }
 
-    public static List<Item> getAll() {
-        return List.of(ARMOR_WITHOUT_GEM, SWORD_WITH_DIAMOND, HELMET_WITH_RUBY_AND_EMERALD);
+    private final List<Item> equipment = new ArrayList<>();
+
+    public EquipmentTestFactory() {
+        equipment.addAll(List.of(
+                Armor.builder()
+                        .name(ARMOR_NAME)
+                        .power(RARE_POWER)
+                        .rarity(RARE)
+                        .gems(List.of())
+                        .build(),
+                Sword.builder()
+                        .name(SWORD_NAME)
+                        .power(LEGENDARY_POWER)
+                        .rarity(LEGENDARY)
+                        .gems(List.of(new Diamond()))
+                        .build(),
+                Helmet.builder()
+                        .name(HELMET_NANE)
+                        .power(COMMON_POWER)
+                        .rarity(COMMON)
+                        .gems(List.of(new Ruby(), new Emerald()))
+                        .build()
+        ));
+    }
+
+    public Item getByName(String name) {
+        return getAll().stream()
+                .filter(item -> Objects.equals(item.getName(), name))
+                .findFirst().orElseThrow();
+    }
+
+    public List<Item> getAll() {
+        return equipment;
     }
 }
 
