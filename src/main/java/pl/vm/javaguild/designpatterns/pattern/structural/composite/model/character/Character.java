@@ -5,7 +5,6 @@ import lombok.experimental.SuperBuilder;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.Item;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.utility.PowerUtility;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @SuperBuilder
@@ -14,7 +13,7 @@ abstract class Character implements Item {
 
     protected final String name;
     protected final Long power;
-    protected final List<Item> equipment = new ArrayList<>();
+    protected final List<Item> equipment;
 
     @Override
     public String getName() {

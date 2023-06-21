@@ -18,9 +18,9 @@ import static pl.vm.javaguild.designpatterns.pattern.structural.composite.utilit
 @Getter
 public class EquipmentTestFactory {
 
-    public static final Equipment ARMOR_WITHOUT_GEM;
-    public static final Equipment SWORD_WITH_DIAMOND;
-    public static final Equipment HELMET_WITH_RUBY_AND_EMERALD;
+    public static final Item ARMOR_WITHOUT_GEM;
+    public static final Item SWORD_WITH_DIAMOND;
+    public static final Item HELMET_WITH_RUBY_AND_EMERALD;
 
     static {
         ARMOR_WITHOUT_GEM = Armor.builder()
@@ -43,7 +43,7 @@ public class EquipmentTestFactory {
                 .build();
     }
 
-    public List<Item> getAll() {
+    public static List<Item> getAll() {
         return List.of(ARMOR_WITHOUT_GEM, SWORD_WITH_DIAMOND, HELMET_WITH_RUBY_AND_EMERALD);
     }
 }

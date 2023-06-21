@@ -142,7 +142,7 @@ public class CompositeTest {
         }
 
         @Test
-        void should_remove_gem_to_equipment() {
+        void should_remove_gem_from_equipment() {
             // given
             Item gem = new Diamond();
             Item equipment = Helmet.builder()
