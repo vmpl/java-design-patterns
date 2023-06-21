@@ -10,6 +10,7 @@ import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.factory.CompositeTestFactory;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.model.Rarity;
+import pl.vm.javaguild.designpatterns.pattern.structural.composite.model.alliance.Alliance;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.model.character.CharacterTestFactory;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.model.equipment.Armor;
 import pl.vm.javaguild.designpatterns.pattern.structural.composite.model.equipment.EquipmentTestFactory;
@@ -264,6 +265,26 @@ public class CompositeTest {
             // then
             assertThat(powerAfter).isLessThan(powerBefore);
             assertThat(powerAfter).isEqualTo(120L);
+        }
+    }
+
+    @Nested
+    @DisplayName("Testing of 'Alliance'")
+    class AllianceTest {
+
+        @Test
+        void should_get_power_of_alliance() {
+            // given
+            Item alliance = Alliance.builder()
+                    .name("Fellowship of the vm.pl")
+                    .characters(testFactory.getCharacterTestFactory().getAll())
+                    .build();
+
+            // when
+            Long power = alliance.getPower();
+
+            // then
+            assertThat(power).isEqualTo(900L);
         }
     }
 }

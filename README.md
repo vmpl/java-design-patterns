@@ -11,18 +11,20 @@ It is created and developed by **java guild** in [vm.pl](https://vm.pl/).
         - [Builder](#builder)
         - [Prototype](#prototype)
         - [Singleton](#singleton)
+    - [Structural](#structural)
+        - [Composite](#composite)
 
 ## Design patterns
 
 ### Creational
 
-Creational design patterns are a category of design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the
+**Creational** design patterns are a category of design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the
 situation. These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator.
 This gives program more flexibility in deciding which objects need to be created for a given use case.
 
 #### Simple factory
 
-The simple factory design pattern is a design pattern that is used to create objects without specifying the exact class
+The **Simple Factory** design pattern is a design pattern that is used to create objects without specifying the exact class
 of object that will be created. This is
 done by creating a factory class that has a method for creating objects, and the class of object that is created is
 determined by the input to this method.
@@ -33,16 +35,16 @@ determined by the input to this method.
 
 #### Builder
 
-The builder pattern is a design pattern designed to provide a flexible solution to various object creation problems in object-oriented programming. The intent of the builder design pattern is to separate the construction of a complex object from its representation. It is one of the Gang of Four design patterns.
+The **Builder** is a design pattern designed to provide a flexible solution to various object creation problems in object-oriented programming. The intent of
+the builder design pattern is to separate the construction of a complex object from its representation. It is one of the Gang of Four design patterns.
 
 [Builder enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/builder/README.md)
 
 [Builder source code ](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/builder)
 
-
 #### Prototype
 
-The Prototype Design Pattern is a creational design pattern that allows you to create new objects by cloning existing
+The **Prototype** is a creational design pattern that allows you to create new objects by cloning existing
 ones. The idea is to create a prototype object and then create new objects by copying this prototype and then modifying
 it as necessary. This can be useful in situations where creating new objects from scratch is expensive, time-consuming,
 or difficult. This allows you to create new objects that are similar to existing ones, but with slight variations.
@@ -52,10 +54,27 @@ or difficult. This allows you to create new objects that are similar to existing
 [Prototype source code of free agent market](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/prototype)
 
 #### Singleton
-In Java, the Singleton pattern is a design pattern that restricts the instantiation of a class to one object and provides global access to that instance throughout the application.
-It ensures that a class has only one instance and provides a single point of access to that instance.
 
+In Java, the **Singleton** is a design pattern that restricts the instantiation of a class to one object and provides global access to that instance throughout
+the application.
+It ensures that a class has only one instance and provides a single point of access to that instance.
 
 [Singleton enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton/SINGLETON.md)
 
 [Singleton source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton)
+
+### Structural
+
+**Structural** are a category of design patterns that focus on how objects and classes are composed to form larger structures.
+They simplify the structure by identifying the relationships among classes and objects. This makes it easier to scale and maintain the system as it grows.
+
+#### Composite
+
+The **Composite** is a structural design pattern that helps you compose objects into tree structures to represent part-whole hierarchies.
+In this pattern, individual objects (leaves) and compositions of objects (composites) are treated uniformly.
+This means that client code can interact with a single object and a composition of objects through the same interface.
+The pattern ensures that the client code can treat complex and simple objects the same way, and this allows you to build more flexible and extensible systems.
+
+[Composite enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/composite/COMPOSITE.md)
+
+[Composite source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/composite)
