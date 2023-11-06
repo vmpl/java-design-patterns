@@ -10,11 +10,10 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 import pl.vm.javaguild.designpatterns.pattern.structural.facade.company.CompanyFacade;
 
-
 import java.util.LinkedList;
 import java.util.List;
 
-class CompanyOfficeTest {
+class CompanyTest {
 
 	private CustomAppender appender;
 

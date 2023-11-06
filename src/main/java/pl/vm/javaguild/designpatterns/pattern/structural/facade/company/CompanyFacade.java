@@ -9,7 +9,7 @@ import java.util.List;
  * <p> This makes the office easier to operate and cuts the dependencies from the office user to
  * the subsystems.
  */
-public class CompanyFacade {
+public class CompanyFacade implements CompanyFacadeInterface {
 
     private final List<CompanyWorker> workers;
 
@@ -20,6 +20,7 @@ public class CompanyFacade {
                new CompanyDesigner());
     }
 
+    @Override
    public void workDay() {
         workers.forEach(CompanyWorker::goToOffice);
         workers.forEach(CompanyWorker::work);
@@ -27,6 +28,7 @@ public class CompanyFacade {
 
    }
 
+   @Override
    public void delegationTrip() {
 
         workers.forEach(CompanyWorker::bookTripInSystem);
