@@ -1,10 +1,12 @@
 package pl.vm.javaguild.designpatterns.pattern.structural.bridge.model.vehicle;
 
+import pl.vm.javaguild.designpatterns.pattern.structural.bridge.model.Engine;
 import pl.vm.javaguild.designpatterns.pattern.structural.bridge.model.Vehicle;
 import pl.vm.javaguild.designpatterns.pattern.structural.bridge.model.engine.CylinderConfiguration;
 import pl.vm.javaguild.designpatterns.pattern.structural.bridge.model.engine.EngineFactory;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 public class VehicleFactory {
@@ -19,9 +21,28 @@ public class VehicleFactory {
         );
     }
 
+    public Optional<Vehicle> findBy(Manufacturer manufacturer, Engine engine) {
+        return findBy(manufacturer)
+                .filter(vehicle -> Objects.equals(vehicle.getEngine(), engine));
+    }
+
     public Optional<Vehicle> findBy(Manufacturer manufacturer) {
         return vehicles.stream()
                 .filter(vehicle -> vehicle.getManufacturer() == manufacturer)
                 .findFirst();
+    }
+
+    public Vehicle createCustomVehicle(Manufacturer manufacturer, Engine engine) {
+        return new Vehicle() {
+            @Override
+            public Engine getEngine() {
+                return engine;
+            }
+
+            @Override
+            public Manufacturer getManufacturer() {
+                return manufacturer;
+            }
+        };
     }
 }

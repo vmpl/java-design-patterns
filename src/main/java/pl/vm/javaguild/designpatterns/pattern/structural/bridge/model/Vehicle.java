@@ -10,15 +10,6 @@ import java.math.BigDecimal;
 public interface Vehicle {
 
     /**
-     * Gets price of given vehicle.
-     *
-     * @return price.
-     */
-    default BigDecimal getPrice() {
-        return getEngine().getPrice().multiply(new BigDecimal(getManufacturer().getTrendValue()));
-    }
-
-    /**
      * <b>Most important building block of Bridge Design Pattern</b>
      * <p>
      * It delegates business logic of another abstract layer to another class.
@@ -29,6 +20,15 @@ public interface Vehicle {
      * @return value of engine
      */
     Engine getEngine();
+
+    /**
+     * Gets price of given vehicle.
+     *
+     * @return price.
+     */
+    default BigDecimal getPrice() {
+        return getEngine().getPrice().multiply(new BigDecimal(getManufacturer().getTrendValue()));
+    }
 
     /**
      * Gets original creator.
