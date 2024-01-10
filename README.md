@@ -11,18 +11,24 @@ It is created and developed by **java guild** in [vm.pl](https://vm.pl/).
         - [Builder](#builder)
         - [Prototype](#prototype)
         - [Singleton](#singleton)
+    - [Structural](#structural)
+        - [Composite](#composite)
+        - [Bridge](#bridge)
+    - [Behavioral](#behavioral)
+        - [Memento](#memento)
+        - [Visitor](#visitor)
 
 ## Design patterns
 
 ### Creational
 
-Creational design patterns are a category of design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the
+**Creational** design patterns are a category of design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the
 situation. These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator.
 This gives program more flexibility in deciding which objects need to be created for a given use case.
 
 #### Simple factory
 
-The simple factory design pattern is a design pattern that is used to create objects without specifying the exact class
+The **Simple Factory** design pattern is a design pattern that is used to create objects without specifying the exact class
 of object that will be created. This is
 done by creating a factory class that has a method for creating objects, and the class of object that is created is
 determined by the input to this method.
@@ -33,16 +39,16 @@ determined by the input to this method.
 
 #### Builder
 
-The builder pattern is a design pattern designed to provide a flexible solution to various object creation problems in object-oriented programming. The intent of the builder design pattern is to separate the construction of a complex object from its representation. It is one of the Gang of Four design patterns.
+The **Builder** is a design pattern designed to provide a flexible solution to various object creation problems in object-oriented programming. The intent of
+the builder design pattern is to separate the construction of a complex object from its representation. It is one of the Gang of Four design patterns.
 
 [Builder enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/builder/README.md)
 
 [Builder source code ](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/builder)
 
-
 #### Prototype
 
-The Prototype Design Pattern is a creational design pattern that allows you to create new objects by cloning existing
+The **Prototype** is a creational design pattern that allows you to create new objects by cloning existing
 ones. The idea is to create a prototype object and then create new objects by copying this prototype and then modifying
 it as necessary. This can be useful in situations where creating new objects from scratch is expensive, time-consuming,
 or difficult. This allows you to create new objects that are similar to existing ones, but with slight variations.
@@ -52,10 +58,72 @@ or difficult. This allows you to create new objects that are similar to existing
 [Prototype source code of free agent market](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/prototype)
 
 #### Singleton
-In Java, the Singleton pattern is a design pattern that restricts the instantiation of a class to one object and provides global access to that instance throughout the application.
-It ensures that a class has only one instance and provides a single point of access to that instance.
 
+In Java, the **Singleton** is a design pattern that restricts the instantiation of a class to one object and provides global access to that instance throughout
+the application.
+It ensures that a class has only one instance and provides a single point of access to that instance.
 
 [Singleton enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton/SINGLETON.md)
 
 [Singleton source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/creational/singleton)
+
+### Structural
+
+**Structural** are a category of design patterns that focus on how objects and classes are composed to form larger structures.
+They simplify the structure by identifying the relationships among classes and objects. This makes it easier to scale and maintain the system as it grows.
+
+#### Composite
+
+The **Composite** is a structural design pattern that helps you compose objects into tree structures to represent part-whole hierarchies.
+In this pattern, individual objects (leaves) and compositions of objects (composites) are treated uniformly.
+This means that client code can interact with a single object and a composition of objects through the same interface.
+The pattern ensures that the client code can treat complex and simple objects the same way, and this allows you to build more flexible and extensible systems.
+
+[Composite enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/composite/COMPOSITE.md)
+
+[Composite source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/composite)
+
+#### Bridge
+
+The **Bridge** is a structural design pattern that separates an abstraction from its implementation, allowing the two to vary independently. It
+decouples the abstraction from the implementation, enabling both to change independently.
+
+This pattern promotes loose coupling by enabling the separation of the abstract and concrete aspects of a system, increasing flexibility and maintainability. It
+also allows for multiple implementations of the same abstraction, simplifying component-based software development.
+
+[Bridge enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/bridge/BRIDGE.md)
+
+[Bridge source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/bridge)
+
+### Behavioral
+
+**Behavioral** design patterns are concerned with the communication and behavior of objects and classes within software systems. They provide solutions for
+common
+communication patterns and design problems, promoting flexibility, modularity, and maintainability.
+
+#### Memento
+
+**Memento** is a behavioral design pattern that provides a way to capture and restore the internal state of an object without violating its encapsulation. It is
+used to preserve a snapshot of the object's state at a specific point in time, called a memento. This allows the object to be restored to its previous state if
+needed.
+
+[Memento source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/behavioral/memento)
+
+#### Strategy
+
+**Strategy** is a behavioral design pattern that encapsulates a family of algorithms within interchangeable objects. This pattern allows the algorithm used by a
+program to be selected at runtime.
+This pattern is commonly used in applications where the algorithm used by a program can vary depending on the specific situation. For example, a game engine
+might use different rendering strategies for different graphics cards, or a data processing application might use different compression strategies for different
+types of data.
+
+[Strategy source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/behavioral/strategy)
+
+#### Visitor
+
+**Visitor** is a behavioral design pattern that separates the algorithms from the objects on which they operate. This allows for different algorithms to be
+applied to a set of objects without modifying the objects themselves.
+This pattern is commonly used in applications where it is necessary to perform different operations on a set of objects, such as formatting documents, rendering
+graphics, or applying business rules to a collection of data.
+
+[Visitor source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/behavioral/visitor)
