@@ -16,6 +16,7 @@ It is created and developed by **java guild** in [vm.pl](https://vm.pl/).
         - [Bridge](#bridge)
     - [Behavioral](#behavioral)
         - [Memento](#memento)
+        - [Strategy](#strategy)
         - [Visitor](#visitor)
 
 ## Design patterns
