@@ -23,7 +23,7 @@
 
 ## Implementation Details
 
-![Base structure - class diagram](./diagram/base structure.svg)
+![Base structure - class diagram](./diagram/composite-base structure.svg)
 
 - **Component Interface**
     - Define an interface or an abstract class for common operations for both simple and composite objects.
@@ -55,4 +55,4 @@
 
 ## Class diagram of aRPG' inventory (game analogy)
 
-![aRPG Inventory - class diagram](./diagram/composite.svg)
+![aRPG Inventory - class diagram](./diagram/composite-inventory.svg)

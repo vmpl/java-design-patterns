@@ -78,3 +78,16 @@ The pattern ensures that the client code can treat complex and simple objects th
 [Composite enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/composite/COMPOSITE.md)
 
 [Composite source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/composite)
+
+
+#### Bridge
+
+The **Bridge** is a structural design pattern that separates an abstraction from its implementation, allowing the two to vary independently. It
+decouples the abstraction from the implementation, enabling both to change independently.
+
+This pattern promotes loose coupling by enabling the separation of the abstract and concrete aspects of a system, increasing flexibility and maintainability. It
+also allows for multiple implementations of the same abstraction, simplifying component-based software development.
+
+[Bridge enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/bridge/BRIDGE.md)
+
+[Bridge source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/bridge)
