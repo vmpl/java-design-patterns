@@ -15,7 +15,8 @@ It is created and developed by **java guild** in [vm.pl](https://vm.pl/).
         - [Composite](#composite)
         - [Bridge](#bridge)
     - [Behavioral](#behavioral)
-      - [Memento](#memento)
+        - [Memento](#memento)
+        - [Visitor](#visitor)
 
 ## Design patterns
 
@@ -107,3 +108,22 @@ used to preserve a snapshot of the object's state at a specific point in time, c
 needed.
 
 [Memento source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/behavioral/memento)
+
+#### Strategy
+
+**Strategy** is a behavioral design pattern that encapsulates a family of algorithms within interchangeable objects. This pattern allows the algorithm used by a
+program to be selected at runtime.
+This pattern is commonly used in applications where the algorithm used by a program can vary depending on the specific situation. For example, a game engine
+might use different rendering strategies for different graphics cards, or a data processing application might use different compression strategies for different
+types of data.
+
+[Strategy source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/behavioral/strategy)
+
+#### Visitor
+
+**Visitor** is a behavioral design pattern that separates the algorithms from the objects on which they operate. This allows for different algorithms to be
+applied to a set of objects without modifying the objects themselves.
+This pattern is commonly used in applications where it is necessary to perform different operations on a set of objects, such as formatting documents, rendering
+graphics, or applying business rules to a collection of data.
+
+[Visitor source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/behavioral/visitor)
