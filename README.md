@@ -13,6 +13,9 @@ It is created and developed by **java guild** in [vm.pl](https://vm.pl/).
         - [Singleton](#singleton)
     - [Structural](#structural)
         - [Composite](#composite)
+        - [Bridge](#bridge)
+    - [Behavioral](#behavioral)
+      - [Memento](#memento)
 
 ## Design patterns
 
@@ -79,7 +82,6 @@ The pattern ensures that the client code can treat complex and simple objects th
 
 [Composite source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/composite)
 
-
 #### Bridge
 
 The **Bridge** is a structural design pattern that separates an abstraction from its implementation, allowing the two to vary independently. It
@@ -91,3 +93,17 @@ also allows for multiple implementations of the same abstraction, simplifying co
 [Bridge enhanced documentation](./src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/bridge/BRIDGE.md)
 
 [Bridge source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/structural/bridge)
+
+### Behavioral
+
+**Behavioral** design patterns are concerned with the communication and behavior of objects and classes within software systems. They provide solutions for
+common
+communication patterns and design problems, promoting flexibility, modularity, and maintainability.
+
+#### Memento
+
+**Memento** is a behavioral design pattern that provides a way to capture and restore the internal state of an object without violating its encapsulation. It is
+used to preserve a snapshot of the object's state at a specific point in time, called a memento. This allows the object to be restored to its previous state if
+needed.
+
+[Memento source code](https://github.com/vmpl/java-design-patterns/tree/develop/src/main/java/pl/vm/javaguild/designpatterns/pattern/behavioral/memento)
