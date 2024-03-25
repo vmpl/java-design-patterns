@@ -10,9 +10,12 @@ public abstract class Vehicle {
 	private int wheels;
 	private int seats;
 	private String engine;
+	public Context context;
 
-	private VehicleBehavior behavior;
-	public void drive(){
-		behavior.perform();
-	};
+	public abstract void drive (DriveMode driveMode);
+	public abstract String engineInfo ();
+
+	public void setContext(Context context){
+		this.context = context;
+	}
 }
