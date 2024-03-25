@@ -1,6 +1,9 @@
 package pl.vm.javaguild.designpatterns.pattern.behavioral.memento;
 
-class Canvas {
+import lombok.Getter;
+
+@Getter
+class CanvasOriginator {
 	private String content = "";
 
 	public void draw(String shape) {
@@ -17,8 +20,7 @@ class Canvas {
 	}
 
 	// Restores the state from the Memento
-	public void undoToLastSave(Object obj) {
-		CanvasMemento memento = (CanvasMemento) obj;
+	void undoToLastSave(CanvasMemento memento) {
 		content = memento.getState();
 	}
 

@@ -5,25 +5,29 @@ import java.util.List;
 
 class Caretaker {
 	private final List<CanvasMemento> saveStates = new LinkedList<>();
-	private final Canvas canvas;
+	private final CanvasOriginator canvas;
 
-	public Caretaker(Canvas canvas) {
+	public Caretaker(CanvasOriginator canvas) {
 		this.canvas = canvas;
 	}
 
 	// Saving state of the originator
 	public void save() {
-		if (saveStates.size() == 10) {
+		if (saveStates.size() > 10) {
 			saveStates.remove(0); // ensure only 10 states are kept
 		}
 		saveStates.add(canvas.save());
 	}
 
-	// Restoring state
 	public void undo() {
 		if (!saveStates.isEmpty()) {
 			CanvasMemento memento = saveStates.remove(saveStates.size() - 1);
 			canvas.undoToLastSave(memento);
 		}
 	}
+
+	int savedStatesSize(){
+		return saveStates.size();
+	}
+	// Restoring state
 }
